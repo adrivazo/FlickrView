@@ -6,8 +6,8 @@
 //  Copyright © 2015 Adriana Vazquez. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <UIKit/UIKit.h>
 
-@interface FeedViewController : NSViewController
+@interface FeedViewController : UIViewController
 
 @end

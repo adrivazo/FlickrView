@@ -15,6 +15,8 @@
 		71D9DBD31BCB4E5C00D1E082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71D9DBD11BCB4E5C00D1E082 /* LaunchScreen.storyboard */; };
 		71D9DBDE1BCB4E5C00D1E082 /* FlickrViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D9DBDD1BCB4E5C00D1E082 /* FlickrViewTests.m */; };
 		71D9DBE91BCB4E5C00D1E082 /* FlickrViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D9DBE81BCB4E5C00D1E082 /* FlickrViewUITests.m */; };
+		71D9DC021BCB561500D1E082 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D9DC011BCB561500D1E082 /* FeedViewController.m */; settings = {ASSET_TAGS = (); }; };
+		71D9DC051BCB568D00D1E082 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71D9DC041BCB568D00D1E082 /* SearchViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		71D9DBE41BCB4E5C00D1E082 /* FlickrViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D9DBE81BCB4E5C00D1E082 /* FlickrViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickrViewUITests.m; sourceTree = "<group>"; };
 		71D9DBEA1BCB4E5C00D1E082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71D9DC001BCB561500D1E082 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		71D9DC011BCB561500D1E082 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		71D9DC031BCB568D00D1E082 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		71D9DC041BCB568D00D1E082 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +111,11 @@
 				71D9DBC71BCB4E5C00D1E082 /* AppDelegate.m */,
 				71D9DBC91BCB4E5C00D1E082 /* ViewController.h */,
 				71D9DBCA1BCB4E5C00D1E082 /* ViewController.m */,
+				71D9DC001BCB561500D1E082 /* FeedViewController.h */,
+				71D9DC011BCB561500D1E082 /* FeedViewController.m */,
 				71D9DBCC1BCB4E5C00D1E082 /* Main.storyboard */,
+				71D9DC031BCB568D00D1E082 /* SearchViewController.h */,
+				71D9DC041BCB568D00D1E082 /* SearchViewController.m */,
 				71D9DBCF1BCB4E5C00D1E082 /* Assets.xcassets */,
 				71D9DBD11BCB4E5C00D1E082 /* LaunchScreen.storyboard */,
 				71D9DBD41BCB4E5C00D1E082 /* Info.plist */,
@@ -272,6 +282,8 @@
 			files = (
 				71D9DBCB1BCB4E5C00D1E082 /* ViewController.m in Sources */,
 				71D9DBC81BCB4E5C00D1E082 /* AppDelegate.m in Sources */,
+				71D9DC051BCB568D00D1E082 /* SearchViewController.m in Sources */,
+				71D9DC021BCB561500D1E082 /* FeedViewController.m in Sources */,
 				71D9DBC51BCB4E5C00D1E082 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +429,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = adrivazo.FlickrView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -428,6 +441,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = adrivazo.FlickrView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
