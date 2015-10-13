@@ -6,9 +6,14 @@
 //  Copyright © 2015 Adriana Vazquez. All rights reserved.
 //
 
+
 #import "SearchViewController.h"
+#import "SearchResultsViewController.h"
 
 @interface SearchViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *searchField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property(nonatomic) NSMutableArray *images;
 
 @end
 
@@ -24,14 +29,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+
+
+//prepare for segue
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"searchDetail"]) {
+        SearchResultsViewController *view = (SearchResultsViewController *)segue.destinationViewController;
+    
+        view.searchText = _searchField.text;
+        
+       // [self loadImagesFromFlickr:_searchField.text];
+        //[view setupTableView];
+        //view.images = self.images;
+        //populate table view of search detail view controller
+    }
 }
-*/
-
 @end

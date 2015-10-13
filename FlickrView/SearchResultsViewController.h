@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface SearchResultsViewController : UIViewController
+
+@property(nonatomic) NSMutableArray *images;
+@property(weak, nonatomic) NSString *searchText;
 
 
 @end

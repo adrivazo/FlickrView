@@ -69,6 +69,7 @@
     UILabel *label = (UILabel *)[cell viewWithTag:1];
     NSMutableDictionary *image = [self.images objectAtIndex:indexPath.row];
     label.text = [image objectForKey:@"title"];
+
     
     return cell;
 }
@@ -79,7 +80,6 @@
         DetailViewController *view = (DetailViewController *)segue.destinationViewController;
         view.image = self.selectedRow;
     }
-
 }
 
 

@@ -16,6 +16,9 @@
                                 <rect key="frame" x="125" y="292" width="53" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search!"/>
+                                <connections>
+                                    <segue destination="n1h-WR-CHU" kind="push" identifier="searchDetail" id="QQO-la-cBK"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="NvA-z1-Dxl">
                                 <rect key="frame" x="7" y="254" width="306" height="30"/>
@@ -35,10 +38,62 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="Triangle 1" selectedImage="Triangle 1" id="Ax1-02-jrP"/>
                     <navigationItem key="navigationItem" id="rct-6d-0Vm"/>
+                    <connections>
+                        <outlet property="searchButton" destination="IkL-Or-CtF" id="aFZ-zo-pDw"/>
+                        <outlet property="searchField" destination="NvA-z1-Dxl" id="Jsr-rI-ZYT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVo-9c-GeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="540" y="1879"/>
+            <point key="canvasLocation" x="512" y="1891"/>
+        </scene>
+        <!--Search Results View Controller-->
+        <scene sceneID="5gP-GS-U3Q">
+            <objects>
+                <viewController id="n1h-WR-CHU" customClass="SearchResultsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hRY-i4-IgK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="139" sectionHeaderHeight="28" sectionFooterHeight="28" id="VAS-Zh-IAh">
+                                <rect key="frame" x="0.0" y="20" width="320" height="528"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="139" id="k8r-eU-whz">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="139"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k8r-eU-whz" id="wiT-aJ-lbw">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="vCt-6A-dq4">
+                                                    <rect key="frame" x="18" y="9" width="120" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WdM-N4-VYG">
+                                                    <rect key="frame" x="146" y="58" width="135" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dvb-6a-30E"/>
+                    <connections>
+                        <outlet property="tableView" destination="VAS-Zh-IAh" id="xJX-Mm-obY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvQ-ov-xhT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="1880"/>
         </scene>
         <!--Search-->
         <scene sceneID="5lB-Kc-Wrg">
