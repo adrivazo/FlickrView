@@ -94,7 +94,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VuQ-cH-dEa">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VuQ-cH-dEa">
                                                     <rect key="frame" x="125" y="11" width="350" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -111,7 +111,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="2UF-xa-QAW" kind="push" id="MZM-7Q-dOq"/>
+                                    <segue destination="2UF-xa-QAW" kind="push" identifier="detail" id="MZM-7Q-dOq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -127,26 +127,37 @@
             </objects>
             <point key="canvasLocation" x="738" y="951"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Details-->
         <scene sceneID="hN6-fD-YUR">
             <objects>
-                <viewController id="2UF-xa-QAW" sceneMemberID="viewController">
+                <viewController title="Photo Details" id="2UF-xa-QAW" customClass="DetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j8X-xj-sXC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="yUb-k0-NrX">
-                                <rect key="frame" x="232" y="351" width="51" height="31"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZLd-JL-G1l">
+                                <rect key="frame" x="40" y="115" width="240" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vux-uk-lub">
+                                <rect key="frame" x="139" y="412" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="52q-rj-4ky"/>
+                    <connections>
+                        <outlet property="imageView" destination="ZLd-JL-G1l" id="pRJ-Hg-NEc"/>
+                        <outlet property="titleLabel" destination="Vux-uk-lub" id="SfY-4m-Lt0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yda-dC-sTx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1306.1333333333332" y="971.27999999999997"/>
+            <point key="canvasLocation" x="1306" y="971"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NRV-Tj-WHV">
